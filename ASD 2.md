@@ -52,5 +52,5 @@ Een **PC samenstellen**: Je kunt kiezen welke CPU, hoeveel RAM, welke videokaart
 - **Stap 3:** Maak de Product klasse
 - **Stap 4:** Maak de Director klasse
 ### 1.2.4 UML
-**![[Pasted image 20260218221506.png]]**
+![[Pasted image 20260218221506.png]]
 ### 1.2.5 Code TODO
