@@ -16,7 +16,7 @@ Pizza-keten die bepaalde pizzas enkel op bepaalde vestigingen maakt (Gent (stand
 ### 1.1.4 UML
 ![](Obsidian/ASD2/img/abstractfactory.png)
 **ALGEMENE UML**
-![](Obsidian/ASD2/img/abstractfactory2.png)
+![](./img/abstractfactory2.png)
 ### 1.1.5 Code TODO 
 
 ## Abstract Factory 
