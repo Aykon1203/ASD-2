@@ -14,8 +14,10 @@ Pizza-keten die bepaalde pizzas enkel op bepaalde vestigingen maakt (Gent (stand
 - **Stap 5:** Schrijf in de Creator een gewone methode die de Factory Method aanroept om een object te krijgen en er acties op uitvoert.
 - **Stap 6:** Maak **Concrete Creators** (subklassen) die de Factory Method overschrijven om het specifieke object terug te geven.
 ### 1.1.4 UML
-![](Obsidian/ASD2/img/abstractfactory.png)
+
+![](./img/abstractfactory.png)
 **ALGEMENE UML**
+
 ![](./img/abstractfactory2.png)
 ### 1.1.5 Code TODO 
 
@@ -34,7 +36,7 @@ Je code maakt een knop en de fabriek zorgt ervoor dat deze wordt aangepast aan h
 - **Stap 4:** Maak per familie een concrete factory
 - **Stap 5:** Injecteer de factoryin de client
 ### 1.2.4 UML
-![](Obsidian/ASD2/img/factorymethod.png)
+![](./img/factorymethod.png)
 ### 1.2.5 Code TODO 
 
 ## 1.2 Builder Pattern
@@ -52,5 +54,5 @@ Een **PC samenstellen**: Je kunt kiezen welke CPU, hoeveel RAM, welke videokaart
 - **Stap 3:** Maak de Product klasse
 - **Stap 4:** Maak de Director klasse
 ### 1.2.4 UML
-![](Obsidian/ASD2/img/builder.png)
+![](./img/builder.png)
 ### 1.2.5 Code TODO
