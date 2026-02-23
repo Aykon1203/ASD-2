@@ -16,6 +16,7 @@ Pizza-keten die bepaalde pizzas enkel op bepaalde vestigingen maakt (Gent (stand
 ### 1.1.4 UML
 
 ![](./img/abstractfactory.png)
+
 **ALGEMENE UML**
 
 ![](./img/abstractfactory2.png)
