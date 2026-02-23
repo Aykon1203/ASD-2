@@ -19,7 +19,7 @@ Pizza-keten die bepaalde pizzas enkel op bepaalde vestigingen maakt (Gent (stand
 ![](Obsidian/ASD2/img/abstractfactory2.png)
 ### 1.1.5 Code TODO 
 
-## Abstract Factory
+## Abstract Factory 
 [VIDEO](https://www.youtube.com/watch?v=QNpwWkdFvgQ)
 [CHAMILO UITLEG](https://chamilo.hogent.be/index.php?go=CourseViewer&application=Chamilo%5CApplication%5CWeblcms&course=64843&tool=Document&publication_category=350637&browser=Table&tool_action=Viewer&publication=2540994)
 ### 1.2.1 Gebruik
