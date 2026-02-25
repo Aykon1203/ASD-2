@@ -74,9 +74,9 @@ Ander voorbeeld is een tolk. De ene persoon praat Spaans en de andere verstaat g
 
 Voor een Kalkoen toe te voegen aan het project dat oorspronkelijk enkel voor een Eend was gemaakt, heb je de KalkoenAdapter nodig die een Eend omzet in een Kalkoen
 
-![](../../Pasted%20image%2020260225145027.png)
+![](img/Pasted%20image%2020260225145027.png)
 
-![](../../Pasted%20image%2020260225145217.png)![](../../Pasted%20image%2020260225145236.png)
+![](img/Pasted%20image%2020260225145217.png)![](img/Pasted%20image%2020260225145236.png)
 
 ### 1.3.3 Stappen
 - **Stap 1:** Maak de Target interface die de gewenste functionaliteit definieert voor de client.
@@ -85,6 +85,6 @@ Voor een Kalkoen toe te voegen aan het project dat oorspronkelijk enkel voor een
 - **Stap 4:** Voeg een referentie van de Adaptee toe aan de Adapter klasse middels compositie.
 - **Stap 5:** Koppel de Target methoden in de Adapter aan de specifieke logica van de Adaptee.
 ### 1.3.4 Algemene UML
-![](../../Pasted%20image%2020260225145530.png)
+![](img/Pasted%20image%2020260225145530.png)
 
 ### 1.3.5 Code TODO
