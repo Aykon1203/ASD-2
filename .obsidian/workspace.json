@@ -8,7 +8,7 @@
         "type": "tabs",
         "children": [
           {
-            "id": "5561357afe1d794d",
+            "id": "477f5a9a02924a22",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -194,20 +194,21 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "8a4985a0876538c3",
+  "active": "477f5a9a02924a22",
   "lastOpenFiles": [
+    "ASD 2.md",
+    "ASD 2.md",
+    "ASD 2",
     "img/Pasted image 20260309150558.png",
     "img/Pasted image 20260309150514.png",
     "img/Pasted image 20260309145827.png",
     "Pasted image 20260309145815.png",
     "Pasted image 20260309145708.png",
-    "ASD 2.md",
     "builder.png",
     "abstractfactory.png",
     "abstractfactory2.png",
     "img/factorymethod.png",
     "img/builder.png",
-    "img/abstractfactory2.png",
     "img",
     "test"
   ]
