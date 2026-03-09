@@ -4,19 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "441bd891b9f3a906",
+        "id": "c05746987df405d9",
         "type": "tabs",
         "children": [
           {
-            "id": "0ab6e3c99513fe67",
+            "id": "b90cf43c2fddd67c",
             "type": "leaf",
             "state": {
-              "type": "image",
+              "type": "markdown",
               "state": {
-                "file": "builder.png"
+                "file": "ASD 2.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-image",
-              "title": "builder"
+              "icon": "lucide-file",
+              "title": "ASD 2"
             }
           }
         ]
@@ -192,12 +194,21 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "3e2604f5a4bd5dc3",
+  "active": "b90cf43c2fddd67c",
   "lastOpenFiles": [
-    "abstractfactory2.png",
     "builder.png",
+    "ASD 2.md",
     "abstractfactory.png",
-    "factorymethod.png",
-    "ASD 2.md"
+    "abstractfactory2.png",
+    "img/factorymethod.png",
+    "img/builder.png",
+    "img/abstractfactory2.png",
+    "img/abstractfactory.png",
+    "img/Pasted image 20260225145530.png",
+    "img/Pasted image 20260225145236.png",
+    "img/Pasted image 20260225145217.png",
+    "img/Pasted image 20260225145027.png",
+    "img",
+    "test"
   ]
 }
