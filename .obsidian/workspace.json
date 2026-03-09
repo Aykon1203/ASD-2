@@ -4,19 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "441bd891b9f3a906",
+        "id": "a29148a5f1b12ee9",
         "type": "tabs",
         "children": [
           {
-            "id": "0ab6e3c99513fe67",
+            "id": "477f5a9a02924a22",
             "type": "leaf",
             "state": {
-              "type": "image",
+              "type": "markdown",
               "state": {
-                "file": "builder.png"
+                "file": "ASD2.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-image",
-              "title": "builder"
+              "icon": "lucide-file",
+              "title": "ASD2"
             }
           }
         ]
@@ -154,13 +156,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "builder.png",
+                "file": "ASD2.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of builder"
+              "title": "Outline of ASD2"
             }
           },
           {
@@ -192,12 +194,22 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "3e2604f5a4bd5dc3",
+  "active": "477f5a9a02924a22",
   "lastOpenFiles": [
-    "abstractfactory2.png",
+    "ASD2.md",
+    "ASD2.md",
+    "ASD 2",
+    "img/Pasted image 20260309150558.png",
+    "img/Pasted image 20260309150514.png",
+    "img/Pasted image 20260309145827.png",
+    "Pasted image 20260309145815.png",
+    "Pasted image 20260309145708.png",
     "builder.png",
     "abstractfactory.png",
-    "factorymethod.png",
-    "ASD 2.md"
+    "abstractfactory2.png",
+    "img/factorymethod.png",
+    "img/builder.png",
+    "img",
+    "test"
   ]
 }
