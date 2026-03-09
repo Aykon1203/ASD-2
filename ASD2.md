@@ -112,7 +112,7 @@ Een land kan maar 1 president hebben. Meer dan 1 president kan niet. Het wordt d
 - **Stap 5:** Implementeer logica in deze methode die controleert of de instantie al bestaat: zo ja, geef deze terug; zo nee, maak de instantie aan en geef deze terug (**lazy initialization**).
 ### 1.4.4 UML
 
-![[img/Pasted image 20260309145827.png]]
+![](img/Pasted%20image%2020260309145827.png)
 ### 1.4.5 Code TODO
 
 ## 1.5 Iterator Pattern
@@ -140,7 +140,7 @@ Een serveerster wil de menu's van zowel het _Pancake House_ (gebruikt een `Array
 
 ### 1.5.4 UML
 
-![[img/Pasted image 20260309150514.png]]
+![](img/Pasted%20image%2020260309150514.png)
 ### 1.5.5 Code TODO
 
 
@@ -168,5 +168,5 @@ Een restaurantmenu kan bestaan uit losse gerechten (`MenuItems`), maar ook uit s
  
 ### 1.6.4 UML
 
-![[img/Pasted image 20260309150558.png]]
+![](img/Pasted%20image%2020260309150558.png)
 ### 1.6.5 Code TODO
