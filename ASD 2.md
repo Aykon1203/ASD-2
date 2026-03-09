@@ -165,7 +165,7 @@ Een restaurantmenu kan bestaan uit losse gerechten (`MenuItems`), maar ook uit s
 - **Stap 3:** Maak de `Composite` klasse (bijv. `Menu`) die ook de `Component` uitbreidt, maar daarnaast een lijst van `Component` kinderen bijhoudt.
 - **Stap 4:** Implementeer in de `Composite` klasse methoden om kinderen toe te voegen of te verwijderen (`add()`, `remove()`).
 - **Stap 5:** Implementeer de hoofdoperatie (bijv. `print()`) in de `Composite` klasse zodanig dat deze de operatie delegeert aan al zijn kinderen (recursie).
-
+ 
 ### 1.6.4 UML
 
 ![[img/Pasted image 20260309150558.png]]
