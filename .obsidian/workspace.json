@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "a29148a5f1b12ee9",
+        "id": "b9fed1696d8ddddb",
         "type": "tabs",
         "children": [
           {
-            "id": "477f5a9a02924a22",
+            "id": "b1f4468d10da05df",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -194,10 +194,10 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "477f5a9a02924a22",
+  "active": "b1f4468d10da05df",
   "lastOpenFiles": [
     "ASD2.md",
-    "ASD2.md",
+    "img/Pasted.md",
     "ASD 2",
     "img/Pasted image 20260309150558.png",
     "img/Pasted image 20260309150514.png",
