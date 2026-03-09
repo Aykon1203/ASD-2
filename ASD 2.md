@@ -59,7 +59,9 @@ Een **PC samenstellen**: Je kunt kiezen welke CPU, hoeveel RAM, welke videokaart
 ### 1.2.5 Code TODO
 
 ## 1.3 Adapter Pattern
-
+[The Adapter Pattern Explained and Implemented in Java](https://www.youtube.com/watch?v=wA3keqCeKtM)
+[Adapter Design Pattern in Java Theory](https://www.youtube.com/watch?v=5-xqFjo_jC8&pp=ygUbYWRhcHRlciBkZXNpZ24gcGF0dGVybiBqYXZh0gcJCa4KAYcqIYzv "Adapter Design Pattern in Java Theory")
+[Adapter Design Pattern in Java](https://www.youtube.com/watch?v=Y7DYhe6efQY&pp=ygUbYWRhcHRlciBkZXNpZ24gcGF0dGVybiBqYXZh "Adapter Design Pattern in Java")
 ### 1.3.1 Gebruik
 Wordt gebruikt wanneer je iets moet omzetten in iets anders
 
@@ -88,3 +90,83 @@ Voor een Kalkoen toe te voegen aan het project dat oorspronkelijk enkel voor een
 ![](img/Pasted%20image%2020260225145530.png)
 
 ### 1.3.5 Code TODO
+
+## 1.4 Singleton Pattern
+[The Singleton Pattern Explained and Implemented in Java | Creational Design Patterns | Geekific](https://www.youtube.com/watch?v=tSZn4wkBIu8&pp=ygUdc2luZ2xldG9uIGRlc2lnbiBwYXR0ZXJuIGphdmE%3D "The Singleton Pattern Explained and Implemented in Java | Creational Design Patterns | Geekific")[Singleton Design Pattern: Easy Guide for Beginners](https://www.youtube.com/watch?v=412kLiN9PQU&pp=ygUdc2luZ2xldG9uIGRlc2lnbiBwYXR0ZXJuIGphdmE%3D "Singleton Design Pattern: Easy Guide for Beginners")
+
+### 1.4.1 Gebruik
+
+* Er bestaat maar 1 instantie van
+* Het object is overal beschikbaar in de applicatie
+* Ipv. elke keer het object opnieuw te maken, wordt het object hergebruikt
+* Wordt gebruikt voor multithreading (niet zeker of we dit moeten kennen of niet)
+### 1.4.2 Voorbeeld
+
+Een land kan maar 1 president hebben. Meer dan 1 president kan niet. Het wordt dus gelimiteerd op 1!
+
+### 1.4.3 Stappen
+- **Stap 1:** Maak de klasse aan die slechts één instantie mag hebben (de Singleton klasse).
+- **Stap 2:** Maak een **private static** variabele van hetzelfde klassetype aan binnen de klasse om de enige instantie op te slaan.
+- **Stap 3:** Zet de **constructor op private**, zodat de klasse niet van buitenaf geïnstantieerd kan worden met het `new` keyword.
+- **Stap 4:** Schrijf een **public static** methode (meestal `getInstance()`) die fungeert als het centrale toegangspunt tot de instantie.
+- **Stap 5:** Implementeer logica in deze methode die controleert of de instantie al bestaat: zo ja, geef deze terug; zo nee, maak de instantie aan en geef deze terug (**lazy initialization**).
+### 1.4.4 UML
+
+![[img/Pasted image 20260309145827.png]]
+### 1.4.5 Code TODO
+
+## 1.5 Iterator Pattern
+[The Iterator Pattern Explained and Implemented in Java | Behavioral Design Patterns | Geekific](https://www.youtube.com/watch?v=QCWJWfuAfJc&pp=ygUcaXRlcmF0b3IgZGVzaWduIHBhdHRlcm4gamF2YQ%3D%3D "The Iterator Pattern Explained and Implemented in Java | Behavioral Design Patterns | Geekific")
+[Iterator Design Pattern: Easy Guide for Beginners](https://www.youtube.com/watch?v=9l8PJ__Cg_Y&pp=ygUcaXRlcmF0b3IgZGVzaWduIHBhdHRlcm4gamF2YQ%3D%3D "Iterator Design Pattern: Easy Guide for Beginners")
+[CHAMILO](https://chamilo.hogent.be/index.php?go=CourseViewer&application=Chamilo%5CApplication%5CWeblcms&course=64843&tool=Document&publication_category=350639&browser=Table&tool_action=Viewer&publication=2540967)
+
+### 1.5.1 Gebruik
+
+- Biedt een uniforme manier om over verschillende soorten collecties te itereren.
+- Ontkoppelt de client (de "Waitress") van de concrete implementatie van de data (zoals `ArrayList` of `Array`).
+- Maakt het mogelijk om polymorfisme te gebruiken bij het doorlopen van verzamelingen.
+
+### 1.5.2 Voorbeeld
+
+Een serveerster wil de menu's van zowel het _Pancake House_ (gebruikt een `ArrayList`) als het _Diner_ (gebruikt een `Array`) afdrukken. Zonder Iterator moet zij voor elk menu een aparte lus schrijven (één voor de lijst en één voor de array). Met een Iterator kan zij beide menu's op exact dezelfde manier doorlopen.
+
+### 1.5.3 Stappen
+
+- **Stap 1:** Definieer een `Iterator` interface met methoden zoals `hasNext()` en `next()`.
+- **Stap 2:** Maak concrete Iterator-klassen (bijv. `DinerMenuIterator`) die deze interface implementeren voor een specifieke collectie.
+- **Stap 3:** Definieer een gemeenschappelijke `Menu` interface die een methode `createIterator()` bevat.
+- **Stap 4:** Implementeer de `createIterator()` methode in de concrete klassen (bijv. `DinerMenu`), zodat deze de juiste Iterator teruggeven.
+- **Stap 5:** Pas de client (bijv. de `Waitress`) aan zodat deze enkel de `Iterator` interface gebruikt om door de items te lopen, ongeacht de bron.
+
+### 1.5.4 UML
+
+![[img/Pasted image 20260309150514.png]]
+### 1.5.5 Code TODO
+
+
+## 1.6 Composite Pattern
+
+Het Composite pattern wordt gebruikt wanneer objecten in een boomstructuur (geheel-deel hiërarchie) georganiseerd zijn.
+
+### 1.6.1 Gebruik
+
+- Stelt clients in staat om individuele objecten en composities van objecten op een uniforme manier te behandelen.
+- Wordt gebruikt om structuren van objecten weer te geven (zoals een menu dat sub-menu's bevat).
+- Maakt recursieve structuren mogelijk waarbij een "geheel" zelf weer uit "delen" bestaat.
+
+### 1.6.2 Voorbeeld
+
+Een restaurantmenu kan bestaan uit losse gerechten (`MenuItems`), maar ook uit sub-menu's (bijv. een "Dessert menu" binnen het hoofdmenu). Met het Composite pattern kan de serveerster simpelweg `print()` aanroepen op het hoofdmenu, waarna de hele boomstructuur (inclusief alle sub-menu's en hun gerechten) recursief wordt afgedrukt.
+
+### 1.6.3 Stappen
+
+- **Stap 1:** Maak een abstracte `Component` klasse (bijv. `MenuComponent`) die de standaardoperaties definieert voor zowel de bladeren als de composities.
+- **Stap 2:** Maak de `Leaf` klasse (bijv. `MenuItem`) die de `Component` uitbreidt en de specifieke logica voor individuele elementen implementeert.
+- **Stap 3:** Maak de `Composite` klasse (bijv. `Menu`) die ook de `Component` uitbreidt, maar daarnaast een lijst van `Component` kinderen bijhoudt.
+- **Stap 4:** Implementeer in de `Composite` klasse methoden om kinderen toe te voegen of te verwijderen (`add()`, `remove()`).
+- **Stap 5:** Implementeer de hoofdoperatie (bijv. `print()`) in de `Composite` klasse zodanig dat deze de operatie delegeert aan al zijn kinderen (recursie).
+
+### 1.6.4 UML
+
+![[img/Pasted image 20260309150558.png]]
+### 1.6.5 Code TODO
