@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ASD 2.md",
+                "file": "ASD2.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "ASD 2"
+              "title": "ASD2"
             }
           }
         ]
@@ -156,13 +156,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "ASD 2.md",
+                "file": "ASD2.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of ASD 2"
+              "title": "Outline of ASD2"
             }
           },
           {
@@ -196,8 +196,8 @@
   },
   "active": "477f5a9a02924a22",
   "lastOpenFiles": [
-    "ASD 2.md",
-    "ASD 2.md",
+    "ASD2.md",
+    "ASD2.md",
     "ASD 2",
     "img/Pasted image 20260309150558.png",
     "img/Pasted image 20260309150514.png",
