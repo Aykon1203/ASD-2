@@ -1,7 +1,7 @@
 # 1. Design Patterns
 ## 1.1 Factory Pattern
 ### Factory Method
-[VIDEO](https://www.youtube.com/watch?v=EdFq_JIThqM)
+[The Factory Method Pattern Explained and Implemented in Java | Creational Design Patterns | Geekific](https://www.youtube.com/watch?v=EdFq_JIThqM)
 ### 1.1.1 Gebruik
 Gebruik dit als je **één object** wilt maken, maar de keuze voor de precieze versie pas door een subklasse wilt laten maken.
 ### 1.1.2 Voorbeeld
@@ -170,3 +170,34 @@ Een restaurantmenu kan bestaan uit losse gerechten (`MenuItems`), maar ook uit s
 
 ![](img/Pasted%20image%2020260309150558.png)
 ### 1.6.5 Code TODO
+
+
+## 1.7 Command Pattern
+[The Command Pattern Explained and Implemented in Java | Behavioral Design Patterns | Geekific](https://www.youtube.com/watch?v=UfGD60BYzPM)
+[Command Design Pattern: Easy Guide for Beginners](https://www.youtube.com/watch?v=bM9VmJpN2zM)
+
+### 1.7.1  Gebruik
+
+- **Ontkoppeling:** Het scheidt het object dat de aanvraag doet (de _Invoker_) van het object dat weet hoe de aanvraag moet worden uitgevoerd (de _Receiver_).
+- **Undo/Redo:** Omdat elk commando een object is, kun je ze opslaan in een geschiedenis (stack) om acties eenvoudig ongedaan te maken.
+- **Wachtrijen:** Maakt het mogelijk om acties in te plannen, te loggen of op een later tijdstip uit te voeren.
+- **Uitbreidbaarheid:** Je kunt nieuwe commando's toevoegen zonder de bestaande code van de zender of ontvanger aan te passen.
+
+### 1.7.2 Voorbeeld
+
+Stel je een **slimme afstandsbediening** voor (de _Invoker_). Deze afstandsbediening heeft knoppen, maar weet niet wat de apparaten in huis precies doen. Wanneer je op een knop drukt, roept de afstandsbediening `execute()` aan op een `Command` object (bijv. `LightOnCommand`). Dit commando weet precies welke lamp (de _Receiver_) hij moet aanschakelen. De afstandsbediening hoeft dus alleen te weten hoe hij een commando moet uitvoeren, niet hoe een lamp werkt.
+
+### 1.7.3 Stappen
+
+- **Stap 1:** Maak een `Command` interface aan die ten minste één methode definieert: `execute()`. Optioneel kun je ook een `undo()` methode toevoegen.
+- **Stap 2:** Maak de `Receiver` klasse(n) (bijv. `Light` of `Stereo`) die de daadwerkelijke business logica bevatten om een taak uit te voeren.
+- **Stap 3:** Maak `ConcreteCommand` klassen (bijv. `LightOnCommand`) die de `Command` interface implementeren. Deze klassen houden een referentie bij naar de `Receiver` en roepen de juiste methode aan in hun `execute()` implementatie.
+- **Stap 4:** Maak de `Invoker` klasse (bijv. `RemoteControl`). Deze houdt een commando vast en roept op een specifiek moment (zoals bij een knopdruk) de `execute()` methode aan.
+- **Stap 5:** In de `Client` code breng je alles samen: je creëert de `Receiver`, koppelt deze aan een `ConcreteCommand`, en geeft dat commando aan de `Invoker`.
+
+### 1.7.4 UML
+
+![](img/Pasted%20image%2020260311105426.png)
+
+![](img/Pasted%20image%2020260311105451.png)
+### 1.7.5 Code TODO
