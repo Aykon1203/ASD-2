@@ -201,3 +201,41 @@ Stel je een **slimme afstandsbediening** voor (de _Invoker_). Deze afstandsbedie
 
 ![](img/Pasted%20image%2020260311105451.png)
 ### 1.7.5 Code TODO
+
+
+## 1.8 Proxy Pattern
+[ Structural Design Patterns | Geekific](https://www.youtube.com/watch?v=TS5i-uPXLs8)
+[Proxy Design Pattern: Easy Guide for Beginners](https://www.youtube.com/watch?v=CGf7n5kLh28)
+
+### 1.8.1 Gebruik
+* Remote proxy
+	* lokale vertegenwoordiger van een object in een andere JVM
+	* ![](img/Pasted%20image%2020260318122407.png)
+	
+* Virtuele proxy
+	* vertegenwoordiger van object dat te duur is om zelf te maken.
+	* fungeert als surrogaat voor object voor en tijdens de creatie
+		* daarna delegeert de proxy meteen naar een RealSubject
+	* ![](img/Pasted%20image%2020260318122431.png)
+
+### 1.8.2 Voorbeeld
+
+Een `HeavyBook` kan een object zijn dat een compleet e-book van 500MB en duizenden pagina's uit een database moet laden. Als je een lijst van 100 boeken wilt tonen, zou het laden van 100 `HeavyBook` objecten het systeem laten vastlopen.
+
+In plaats daarvan gebruik je `LightBook` (de Proxy). Deze bevat alleen de metadata zoals de naam en auteur. Pas wanneer de gebruiker op "Open boek" klikt en een methode aanroept die de volledige inhoud nodig heeft, zal de `LightBook` intern het `HeavyBook` object aanmaken en de aanroep doorsturen.
+
+### 1.8.3 Stappen
+
+- **Stap 1:** Maak een interface (bijv. `Book`) die de methoden definieert die zowel de proxy als het echte object moeten hebben (bijv. `getName()`, `getAuthor()`).
+- **Stap 2:** Maak de **RealSubject** klasse (bijv. `HeavyBook`) die de interface implementeert. Deze klasse bevat de zware logica of data-loading in de constructor.
+- **Stap 3:** Maak de **Proxy** klasse (bijv. `LightBook`) die ook de interface implementeert.
+- **Stap 4:** Voeg in de Proxy een referentie toe naar het echte object (bijv. `private HeavyBook realBook;`), maar initialiseer deze nog niet (**null**).
+- **Stap 5:** Implementeer de methoden in de Proxy.
+### 1.8.4 UML
+
+Remote proxy:
+* geen idee of we dit zelfs moeten kennen tbh
+Virtual proxy:
+* ![0](img/Pasted%20image%2020260318122849.png)
+
+### 1.8.5 Code TODO
