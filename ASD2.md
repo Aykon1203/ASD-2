@@ -265,6 +265,6 @@ Met het Template Method pattern maak je een abstracte klasse `CaffeineBeverage` 
 
 ### 1.9.4 UML
 
-![](Pasted%20image%2020260414135947.png)
+![](img/Pasted%20image%2020260414135947.png)
 
 ### 1.9.5 Code
