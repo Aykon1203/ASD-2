@@ -239,3 +239,32 @@ Virtual proxy:
 * ![0](img/Pasted%20image%2020260318122849.png)
 
 ### 1.8.5 Code TODO
+
+
+## 1.9 Template Method
+[The Template Method Pattern Explained Implemented in Java | Behavioral Design Patterns | Geekific](https://www.youtube.com/watch?v=cGoVDzHvD4A)
+[Template Method Design Pattern: Easy Guide for Beginners](https://www.youtube.com/watch?v=ybS_d1C_dXE)
+
+### 1.9.1 Gebruik
+- **Algoritmen afschermen:** Het definieert de vaste volgorde van een proces in een centrale methode.
+- **Code-duplicatie voorkomen:** Gemeenschappelijke stappen van verschillende klassen worden gegeneraliseerd in een abstracte bovenklasse.
+- **Hollywoodprincipe:** Volgt het principe "Bel ons niet, wij bellen jou". De high-level component bepaalt wanneer en hoe low-level componenten deelnemen aan de berekening.
+- **Flexibiliteit via Hooks:** Maakt gebruik van methoden die subklassen _kunnen_ overschrijven (maar niet hoeven) om optioneel gedrag toe te voegen.
+
+### 1.9.2 Voorbeeld
+Bij het bereiden van warme dranken zoals koffie en thee zijn de stappen grotendeels gelijk: water koken, de drank trekken, in een kopje schenken en smaakstoffen toevoegen.
+
+Met het Template Method pattern maak je een abstracte klasse `CaffeineBeverage` met een `final` methode `prepareRecipe()`. Deze methode roept de stappen in de juiste volgorde aan. Stappen zoals "water koken" zijn voor elke drank hetzelfde en worden centraal geïmplementeerd. De specifieke stappen, zoals het type ingrediënt dat moet trekken (`brew`) of de smaakstoffen (`addCondiments`), worden als abstracte methoden overgelaten aan de subklassen `Coffee` en `Tea`.
+
+### 1.9.3 Stappen
+- **Stap 1:** Maak een abstracte klasse (`AbstractClass`, bijv. `CaffeineBeverage`) die het algoritme zal bevatten.
+- **Stap 2:** Implementeer de **template method** (bijv. `prepareRecipe()`). Markeer deze als `final` om te voorkomen dat subklassen de volgorde van het algoritme kunnen veranderen.
+- **Stap 3:** Definieer de variabele stappen van het algoritme als `protected abstract` methoden (bijv. `brew()`). Deze moeten door de subklassen worden geïmplementeerd. 
+- **Stap 4:** (Optioneel) Voeg **hooks** toe. Dit zijn concrete methoden met een lege of standaard implementatie die subklassen naar eigen keuze kunnen overschrijven (bijv. `customerWantsCondiments()`).
+- **Stap 5:** Implementeer de concrete subklassen (`ConcreteClass`, bijv. `Coffee` of `Tea`) die de abstracte methoden invullen met specifieke business logica.
+
+### 1.9.4 UML
+
+![](Pasted%20image%2020260414135947.png)
+
+### 1.9.5 Code
