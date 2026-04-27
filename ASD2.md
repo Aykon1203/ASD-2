@@ -268,3 +268,271 @@ Met het Template Method pattern maak je een abstracte klasse `CaffeineBeverage` 
 ![](img/Pasted%20image%2020260414135947.png)
 
 ### 1.9.5 Code
+
+
+
+# 2. Java
+
+## 2.1 Multithreading
+
+### 2.1.1 Inleiding
+
+- **Thread**: een deel van een programma dat gelijktijdig met andere delen in executie gaat. Het is een sequentiële besturingsstroom — een "lichtgewicht" proces.
+- Java heeft ingebouwde primitieven voor multithreading (andere talen zijn afhankelijk van het OS).
+- Thread scheduling in Java is wél platformafhankelijk.
+- Voorbeeld van multithreading in Java: de **garbage collector**.
+
+### 2.1.2 Thread Toestanden: Levenscyclus
+
+|Toestand|Beschrijving|
+|---|---|
+|**new**|Thread is aangemaakt maar nog niet gestart.|
+|**runnable**|`start()` is aangeroepen; thread wordt beschouwd als in executie.|
+|**waiting**|Wacht op een andere thread (via `wait()`/`notify()`).|
+|**timed waiting**|Wacht voor een bepaalde tijd (via `sleep()`).|
+|**blocked**|Geblokkeerd door een I/O-verzoek of een lock.|
+|**terminated**|Thread is beëindigd (taak volbracht of `exit()`).|
+
+**Runnable (JVM) = Ready + Running (OS)**
+
+- **Ready**: initiële toestand, of na het verlopen van een timeslice.
+- **Running**: thread is toegewezen aan een processor (**dispatching**).
+
+> Thread scheduling is een functie van het OS én thread priorities.
+
+---
+
+### 2.1.3 Thread Priorities en Scheduling
+
+- **Priority**: indicatie van belangrijkheid (geeft voorrang bij processortijd).
+    - `Thread.MIN_PRIORITY` (1) — `Thread.NORM_PRIORITY` (5) — `Thread.MAX_PRIORITY` (10)
+- De scheduler zorgt dat de thread met de **hoogste prioriteit** draait.
+- Bij gelijke prioriteit: **timeslicing** (elke thread krijgt een quantum).
+- Methode `yield()`: laat threads van gelijke prioriteit concurreren.
+
+---
+
+### 2.1.4 Creatie en Executie van Threads
+
+#### 2.1.4.1 Via `Runnable` + klasse `Thread`
+
+```java
+public class PrintTask implements Runnable {
+    public void run() {
+        // uit te voeren code
+        Thread.sleep(sleepTime);
+    }
+}
+
+Thread t1 = new Thread(new PrintTask("thread1"));
+t1.start(); // plaatst thread in Ready toestand
+```
+
+#### 2.1.4.2 Via Executor Framework (aanbevolen)
+
+```java
+ExecutorService executor = Executors.newFixedThreadPool(3);
+executor.execute(new PrintTask("thread1"));
+executor.execute(new PrintTask("thread2"));
+executor.execute(new PrintTask("thread3"));
+executor.shutdown(); // sluit pool af als alle threads terminated zijn
+```
+
+> De `run()` methode wordt automatisch aangeroepen wanneer de thread voor het eerst in running toestand komt. Het programma eindigt pas als **alle threads** terminated zijn.
+
+---
+
+### 2.1.5 Thread Synchronisatie
+
+Wanneer meerdere threads een **shared object** kunnen wijzigen, kunnen er problemen optreden.
+
+**Oplossing: mutual exclusion / synchronisatie**
+- Java gebruikt **locks** voor synchronisatie.
+- Interface: `Lock` (`java.util.concurrent.locks`)
+- Implementatie: `ReentrantLock`
+
+**Monitor-mechanisme**
+- Elk object heeft een **monitor** die slechts één thread tegelijk executierecht geeft (`obtaining the lock`).
+- Andere threads komen in **waiting** toestand (lock).
+- Bij vrijgave (`release`) krijgt de thread met hoogste prioriteit voorrang (unlock → runnable).
+
+**Deadlock preventie**
+
+Als een thread `wait()` activeert, zorg dan dat een **andere thread** `notify()` aanroept om terug naar runnable te gaan.
+
+
+### 2.1.6 Producer/Consumer Relatie
+
+#### 2.1.6.1 Zonder synchronisatie
+
+Logische fouten zijn mogelijk:
+
+- Consumer leest een waarde die nog niet geschreven is (initial waarde `-1`).
+- Producer schrijft meerdere keren voordat Consumer leest.
+
+#### 2.1.6.2 Met synchronisatie (`Lock` + `Condition`)
+
+```java
+private Lock accessLock = new ReentrantLock();
+private Condition canWrite = accessLock.newCondition();
+private Condition canRead  = accessLock.newCondition();
+private boolean occupied   = false;
+```
+
+**Producer (`set`)**:
+
+1. `accessLock.lock()`
+2. Zolang buffer vol: `canWrite.await()`
+3. Schrijf waarde, zet `occupied = true`
+4. `canRead.signal()`
+5. `accessLock.unlock()` (in `finally`)
+
+**Consumer (`get`)**:
+
+1. `accessLock.lock()`
+2. Zolang buffer leeg: `canRead.await()`
+3. Lees waarde, zet `occupied = false`
+4. `canWrite.signal()`
+5. `accessLock.unlock()` (in `finally`)
+
+> `await()` → thread in **waiting state**, lock wordt vrijgegeven.  
+> `signal()` → thread terug in **runnable state**.
+
+---
+
+### 2.1.7 Producer/Consumer: `ArrayBlockingQueue`
+
+Hiërarchie: `Collection` → `Queue` → `BlockingQueue` → **`ArrayBlockingQueue`**
+
+- `put(value)`: plaatst element achteraan; **blokkeert** als de queue vol is.
+- `take()`: haalt eerste element op; **blokkeert** als de queue leeg is.
+- Synchronisatie gebeurt **automatisch** — geen `Lock` of `Condition` nodig.
+- De array wordt gebruikt als een **statische circulaire buffer**.
+
+```java
+private ArrayBlockingQueue<Integer> buffer = new ArrayBlockingQueue<>(3);
+
+// Producer
+buffer.put(value);
+
+// Consumer
+int val = buffer.take();
+```
+
+---
+
+### 2.1.8 Multithreading met GUI (JavaFX)
+- GUI-componenten zijn **niet thread-safe**.
+- Slechts één thread mag GUI-componenten aanpassen: de **JavaFX Application Thread**.
+- Alle GUI-taken worden in een **queue** geplaatst en sequentieel uitgevoerd (**thread confinement**).
+
+**Twee regels bij multithreaded JavaFX:**
+1. Tijdrovende taken mogen **niet** door de JavaFX Application Thread worden uitgevoerd.
+2. JavaFX-componenten mogen **enkel** door de JavaFX Application Thread worden benaderd.
+
+**Kleine GUI-updates: `Platform.runLater()`**
+```java
+Platform.runLater(new Runnable() {
+    public void run() {
+        btn.setText("Buy now");
+    }
+});
+```
+
+**Grote achtergrondtaken: `javafx.concurrent` pakket**
+- Interface: `Worker`
+- Klassen: `Task` en `Service`
+
+### 2.1.9 Interface `Callable`
+
+`Runnable.run()` is `void` en kan geen `checked exception` gooien → gebruik `Callable`.
+
+- `Callable<T>` heeft één methode: `call()` — **geeft een waarde terug** en **kan een exception gooien**.
+- Uitvoeren via `ExecutorService.submit()` → geeft een `Future<T>` terug.
+- `future.get()` blokkeert tot het resultaat beschikbaar is.
+
+```java
+public class PrimeSearch implements Callable<BigInteger> {
+    public BigInteger call() {
+        return BigInteger.probablePrime(bitsize, random);
+    }
+}
+
+Future<BigInteger> result = pool.submit(new PrimeSearch(16));
+System.out.println(result.get()); // blokkeert tot klaar
+```
+
+---
+
+### 2.1.10 Methode `join()`
+
+- `thread.join()`: huidige thread **wacht** tot de opgegeven thread terminated is.
+- `thread.join(long millis)`: wacht maximaal het opgegeven aantal milliseconden.
+- Beide methoden gooien een `InterruptedException`.
+
+```java
+producer.join(); // Consumer wacht tot Producer klaar is
+```
+
+---
+
+### 2.1.11. Daemon Threads
+
+- Een **daemon thread** draait als ondersteuning van andere threads.
+- Verhindert **niet** dat het programma eindigt (in tegenstelling tot gewone threads).
+- Voorbeeld: Java's garbage collector.
+- Markeren als daemon: `thread.setDaemon(true)` — **vóór** `start()` aanroepen.
+- Controleren: `thread.isDaemon()`
+
+---
+
+### 2.1.12 Stop, Suspend en Resume (deprecated)
+
+`stop()`, `suspend()` en `resume()` zijn **deprecated**.
+
+**Stoppen:**
+```java
+while (running) {
+    // doe werk
+}
+// stop door running = false te zetten
+```
+
+**Pauzeren:**
+```java
+while (suspended) {
+    wait();
+}
+```
+
+---
+
+### 2.1.13 `volatile`
+
+- Een `volatile` variabele kan door meerdere threads gelezen en bijgewerkt worden **zonder locks**.
+- Wijzigingen door één thread zijn **onmiddellijk zichtbaar** voor alle andere threads.
+- Vaak gebruikt voor een **vlag** (bijv. om een lus te stoppen).
+
+```java
+private volatile boolean flag = false;
+// Geen Lock nodig voor eenvoudige lees/schrijf operaties
+```
+
+---
+
+### 2.1.14 Parallel Streams
+
+- Standaard zijn Java Streams **sequentieel**.
+- Door `.parallel()` toe te voegen, worden bewerkingen verdeeld over meerdere CPU-cores.
+
+```java
+// Sequentieel
+LongStream stream1 = Arrays.stream(values);
+LongSummaryStatistics stats1 = stream1.summaryStatistics();
+
+// Parallel
+LongStream stream2 = Arrays.stream(values).parallel();
+LongSummaryStatistics stats2 = stream2.summaryStatistics();
+```
+
+> In het voorbeeld (100 miljoen elementen): sequentieel ~534ms, parallel ~107ms — een factor ~5 sneller.
