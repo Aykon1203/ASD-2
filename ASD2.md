@@ -15,11 +15,11 @@ Pizza-keten die bepaalde pizzas enkel op bepaalde vestigingen maakt (Gent (stand
 - **Stap 6:** Maak **Concrete Creators** (subklassen) die de Factory Method overschrijven om het specifieke object terug te geven.
 ### 1.1.4 UML
 
-![](./img/abstractfactory.png)
+![](abstractfactory.png)
 
 **ALGEMENE UML**
 
-![](./img/abstractfactory2.png)
+![](abstractfactory2.png)
 ### 1.1.5 Code TODO 
 
 ## Abstract Factory 
@@ -37,7 +37,7 @@ Je code maakt een knop en de fabriek zorgt ervoor dat deze wordt aangepast aan h
 - **Stap 4:** Maak per familie een concrete factory
 - **Stap 5:** Injecteer de factoryin de client
 ### 1.2.4 UML
-![](./img/factorymethod.png)
+![](factorymethod.png)
 ### 1.2.5 Code TODO 
 
 ## 1.2 Builder Pattern
@@ -55,7 +55,7 @@ Een **PC samenstellen**: Je kunt kiezen welke CPU, hoeveel RAM, welke videokaart
 - **Stap 3:** Maak de Product klasse
 - **Stap 4:** Maak de Director klasse
 ### 1.2.4 UML
-![](./img/builder.png)
+![](builder.png)
 ### 1.2.5 Code TODO
 
 ## 1.3 Adapter Pattern
@@ -303,7 +303,7 @@ Met het Template Method pattern maak je een abstracte klasse `CaffeineBeverage` 
 ---
 
 ### 2.1.3 Thread Priorities en Scheduling
-
+![](Pasted%20image%2020260422143904.png)
 - **Priority**: indicatie van belangrijkheid (geeft voorrang bij processortijd).
     - `Thread.MIN_PRIORITY` (1) — `Thread.NORM_PRIORITY` (5) — `Thread.MAX_PRIORITY` (10)
 - De scheduler zorgt dat de thread met de **hoogste prioriteit** draait.
@@ -313,7 +313,7 @@ Met het Template Method pattern maak je een abstracte klasse `CaffeineBeverage` 
 ---
 
 ### 2.1.4 Creatie en Executie van Threads
-
+![](Pasted%20image%2020260422143959.png)
 #### 2.1.4.1 Via `Runnable` + klasse `Thread`
 
 ```java
@@ -328,20 +328,21 @@ Thread t1 = new Thread(new PrintTask("thread1"));
 t1.start(); // plaatst thread in Ready toestand
 ```
 
-#### 2.1.4.2 Via Executor Framework (aanbevolen)
+#### 2.1.4.2 Via Executor Framework
 
 ```java
 ExecutorService executor = Executors.newFixedThreadPool(3);
+
 executor.execute(new PrintTask("thread1"));
+
 executor.execute(new PrintTask("thread2"));
+
 executor.execute(new PrintTask("thread3"));
-executor.shutdown(); // sluit pool af als alle threads terminated zijn
-```
+
+executor.shutdown(); // sluit pool af als alle threads terminated zijn`
+``` 
 
 > De `run()` methode wordt automatisch aangeroepen wanneer de thread voor het eerst in running toestand komt. Het programma eindigt pas als **alle threads** terminated zijn.
-
----
-
 ### 2.1.5 Thread Synchronisatie
 
 Wanneer meerdere threads een **shared object** kunnen wijzigen, kunnen er problemen optreden.
