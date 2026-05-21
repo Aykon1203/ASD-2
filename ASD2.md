@@ -20,7 +20,8 @@ Pizza-keten die bepaalde pizzas enkel op bepaalde vestigingen maakt (Gent (stand
 **ALGEMENE UML**
 
 ![](img/abstractfactory2.png)
-### 1.1.5 Code TODO 
+### 1.1.5 Code 
+Maak de oefening(en) op chamilo
 
 ## Abstract Factory 
 [VIDEO](https://www.youtube.com/watch?v=QNpwWkdFvgQ)
@@ -38,7 +39,8 @@ Je code maakt een knop en de fabriek zorgt ervoor dat deze wordt aangepast aan h
 - **Stap 5:** Injecteer de factoryin de client
 ### 1.2.4 UML
 ![](img/factorymethod.png)
-### 1.2.5 Code TODO 
+### 1.2.5 Code 
+Maak de oefening(en) op chamilo
 
 ## 1.2 Builder Pattern
 **[Builder Design Pattern: Easy Guide for Beginners](https://www.youtube.com/watch?v=Wqx4N4tV_tc)
@@ -56,7 +58,8 @@ Een **PC samenstellen**: Je kunt kiezen welke CPU, hoeveel RAM, welke videokaart
 - **Stap 4:** Maak de Director klasse
 ### 1.2.4 UML
 ![](img/builder.png)
-### 1.2.5 Code TODO
+### 1.2.5 Code 
+Maak de oefening(en) op chamilo
 
 ## 1.3 Adapter Pattern
 [The Adapter Pattern Explained and Implemented in Java](https://www.youtube.com/watch?v=wA3keqCeKtM)
@@ -89,7 +92,8 @@ Voor een Kalkoen toe te voegen aan het project dat oorspronkelijk enkel voor een
 ### 1.3.4 Algemene UML
 ![](img/Pasted%20image%2020260225145530.png)
 
-### 1.3.5 Code TODO
+### 1.3.5 Code 
+Maak de oefening(en) op chamilo
 
 ## 1.4 Singleton Pattern
 [The Singleton Pattern Explained and Implemented in Java | Creational Design Patterns | Geekific](https://www.youtube.com/watch?v=tSZn4wkBIu8&pp=ygUdc2luZ2xldG9uIGRlc2lnbiBwYXR0ZXJuIGphdmE%3D "The Singleton Pattern Explained and Implemented in Java | Creational Design Patterns | Geekific")[Singleton Design Pattern: Easy Guide for Beginners](https://www.youtube.com/watch?v=412kLiN9PQU&pp=ygUdc2luZ2xldG9uIGRlc2lnbiBwYXR0ZXJuIGphdmE%3D "Singleton Design Pattern: Easy Guide for Beginners")
@@ -113,7 +117,8 @@ Een land kan maar 1 president hebben. Meer dan 1 president kan niet. Het wordt d
 ### 1.4.4 UML
 
 ![](img/Pasted%20image%2020260309145827.png)
-### 1.4.5 Code TODO
+### 1.4.5 Code 
+Maak de oefening(en) op chamilo
 
 ## 1.5 Iterator Pattern
 [The Iterator Pattern Explained and Implemented in Java | Behavioral Design Patterns | Geekific](https://www.youtube.com/watch?v=QCWJWfuAfJc&pp=ygUcaXRlcmF0b3IgZGVzaWduIHBhdHRlcm4gamF2YQ%3D%3D "The Iterator Pattern Explained and Implemented in Java | Behavioral Design Patterns | Geekific")
@@ -141,8 +146,8 @@ Een serveerster wil de menu's van zowel het _Pancake House_ (gebruikt een `Array
 ### 1.5.4 UML
 
 ![](img/Pasted%20image%2020260309150514.png)
-### 1.5.5 Code TODO
-
+### 1.5.5 Code 
+Maak de oefening(en) op chamilo
 
 ## 1.6 Composite Pattern
 
@@ -169,7 +174,8 @@ Een restaurantmenu kan bestaan uit losse gerechten (`MenuItems`), maar ook uit s
 ### 1.6.4 UML
 
 ![](img/Pasted%20image%2020260309150558.png)
-### 1.6.5 Code TODO
+### 1.6.5 Code 
+Maak de oefening(en) op chamilo
 
 
 ## 1.7 Command Pattern
@@ -200,7 +206,8 @@ Stel je een **slimme afstandsbediening** voor (de _Invoker_). Deze afstandsbedie
 ![](img/Pasted%20image%2020260311105426.png)
 
 ![](img/Pasted%20image%2020260311105451.png)
-### 1.7.5 Code TODO
+### 1.7.5 Code 
+Maak de oefening(en) op chamilo
 
 
 ## 1.8 Proxy Pattern
@@ -238,7 +245,8 @@ Remote proxy:
 Virtual proxy:
 * ![0](img/Pasted%20image%2020260318122849.png)
 
-### 1.8.5 Code TODO
+### 1.8.5 Code 
+Maak de oefening(en) op chamilo
 
 
 ## 1.9 Template Method
@@ -267,7 +275,8 @@ Met het Template Method pattern maak je een abstracte klasse `CaffeineBeverage` 
 
 ![](img/Pasted%20image%2020260414135947.png)
 
-### 1.9.5 Code
+### 1.9.5 
+Maak de oefening(en) op chamilo
 
 
 
