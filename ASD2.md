@@ -150,6 +150,8 @@ Een serveerster wil de menu's van zowel het _Pancake House_ (gebruikt een `Array
 Maak de oefening(en) op chamilo
 
 ## 1.6 Composite Pattern
+[The Composite Pattern Explained and Implemented in Java | Structural Design Patterns | Geekific
+](https://www.youtube.com/watch?v=oo9AsGqnisk)
 
 Het Composite pattern wordt gebruikt wanneer objecten in een boomstructuur (geheel-deel hiërarchie) georganiseerd zijn.
 
