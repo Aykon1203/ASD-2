@@ -15,11 +15,11 @@ Pizza-keten die bepaalde pizzas enkel op bepaalde vestigingen maakt (Gent (stand
 - **Stap 6:** Maak **Concrete Creators** (subklassen) die de Factory Method overschrijven om het specifieke object terug te geven.
 ### 1.1.4 UML
 
-![](img/abstractfactory.png)
+![](abstractfactory.png)
 
 **ALGEMENE UML**
 
-![](img/abstractfactory2.png)
+![](abstractfactory2.png)
 ### 1.1.5 Code TODO 
 
 ## Abstract Factory 
@@ -37,7 +37,7 @@ Je code maakt een knop en de fabriek zorgt ervoor dat deze wordt aangepast aan h
 - **Stap 4:** Maak per familie een concrete factory
 - **Stap 5:** Injecteer de factoryin de client
 ### 1.2.4 UML
-![](img/factorymethod.png)
+![](factorymethod.png)
 ### 1.2.5 Code TODO 
 
 ## 1.2 Builder Pattern
@@ -55,7 +55,7 @@ Een **PC samenstellen**: Je kunt kiezen welke CPU, hoeveel RAM, welke videokaart
 - **Stap 3:** Maak de Product klasse
 - **Stap 4:** Maak de Director klasse
 ### 1.2.4 UML
-![](img/builder.png)
+![](builder.png)
 ### 1.2.5 Code TODO
 
 ## 1.3 Adapter Pattern
@@ -66,7 +66,7 @@ Een **PC samenstellen**: Je kunt kiezen welke CPU, hoeveel RAM, welke videokaart
 Wordt gebruikt wanneer je iets moet omzetten in iets anders
 
 ### 1.3.2 Voorbeeld
-![](img/Pasted%20image%2020260225144618.png)
+![](Pasted%20image%2020260225144618.png)
 
 Adapter pattern is zoals een een male USB A naar female USB C adapter. Het is nodig om de twee apparaten te verbinden want het ene apparaat heeft enkel USB A kabel en het andere apparaat heeft enkel een USB C poort.
 
@@ -76,9 +76,9 @@ Ander voorbeeld is een tolk. De ene persoon praat Spaans en de andere verstaat g
 
 Voor een Kalkoen toe te voegen aan het project dat oorspronkelijk enkel voor een Eend was gemaakt, heb je de KalkoenAdapter nodig die een Eend omzet in een Kalkoen
 
-![](img/Pasted%20image%2020260225145027.png)
+![](Pasted%20image%2020260225145027.png)
 
-![](img/Pasted%20image%2020260225145217.png)![](img/Pasted%20image%2020260225145236.png)
+![](Pasted%20image%2020260225145217.png)![](Pasted%20image%2020260225145236.png)
 
 ### 1.3.3 Stappen
 - **Stap 1:** Maak de Target interface die de gewenste functionaliteit definieert voor de client.
@@ -87,7 +87,7 @@ Voor een Kalkoen toe te voegen aan het project dat oorspronkelijk enkel voor een
 - **Stap 4:** Voeg een referentie van de Adaptee toe aan de Adapter klasse middels compositie.
 - **Stap 5:** Koppel de Target methoden in de Adapter aan de specifieke logica van de Adaptee.
 ### 1.3.4 Algemene UML
-![](img/Pasted%20image%2020260225145530.png)
+![](Pasted%20image%2020260225145530.png)
 
 ### 1.3.5 Code TODO
 
@@ -112,7 +112,7 @@ Een land kan maar 1 president hebben. Meer dan 1 president kan niet. Het wordt d
 - **Stap 5:** Implementeer logica in deze methode die controleert of de instantie al bestaat: zo ja, geef deze terug; zo nee, maak de instantie aan en geef deze terug (**lazy initialization**).
 ### 1.4.4 UML
 
-![](img/Pasted%20image%2020260309145827.png)
+![](Pasted%20image%2020260309145827.png)
 ### 1.4.5 Code TODO
 
 ## 1.5 Iterator Pattern
@@ -140,7 +140,7 @@ Een serveerster wil de menu's van zowel het _Pancake House_ (gebruikt een `Array
 
 ### 1.5.4 UML
 
-![](img/Pasted%20image%2020260309150514.png)
+![](Pasted%20image%2020260309150514.png)
 ### 1.5.5 Code TODO
 
 
@@ -168,7 +168,7 @@ Een restaurantmenu kan bestaan uit losse gerechten (`MenuItems`), maar ook uit s
  
 ### 1.6.4 UML
 
-![](img/Pasted%20image%2020260309150558.png)
+![](Pasted%20image%2020260309150558.png)
 ### 1.6.5 Code TODO
 
 
@@ -197,9 +197,9 @@ Stel je een **slimme afstandsbediening** voor (de _Invoker_). Deze afstandsbedie
 
 ### 1.7.4 UML
 
-![](img/Pasted%20image%2020260311105426.png)
+![](Pasted%20image%2020260311105426.png)
 
-![](img/Pasted%20image%2020260311105451.png)
+![](Pasted%20image%2020260311105451.png)
 ### 1.7.5 Code TODO
 
 
@@ -210,13 +210,13 @@ Stel je een **slimme afstandsbediening** voor (de _Invoker_). Deze afstandsbedie
 ### 1.8.1 Gebruik
 * Remote proxy
 	* lokale vertegenwoordiger van een object in een andere JVM
-	* ![](img/Pasted%20image%2020260318122407.png)
+	* ![](Pasted%20image%2020260318122407.png)
 	
 * Virtuele proxy
 	* vertegenwoordiger van object dat te duur is om zelf te maken.
 	* fungeert als surrogaat voor object voor en tijdens de creatie
 		* daarna delegeert de proxy meteen naar een RealSubject
-	* ![](img/Pasted%20image%2020260318122431.png)
+	* ![](Pasted%20image%2020260318122431.png)
 
 ### 1.8.2 Voorbeeld
 
@@ -236,7 +236,7 @@ In plaats daarvan gebruik je `LightBook` (de Proxy). Deze bevat alleen de metada
 Remote proxy:
 * geen idee of we dit zelfs moeten kennen tbh
 Virtual proxy:
-* ![0](img/Pasted%20image%2020260318122849.png)
+* ![0](Pasted%20image%2020260318122849.png)
 
 ### 1.8.5 Code TODO
 
@@ -265,7 +265,7 @@ Met het Template Method pattern maak je een abstracte klasse `CaffeineBeverage` 
 
 ### 1.9.4 UML
 
-![](img/Pasted%20image%2020260414135947.png)
+![](Pasted%20image%2020260414135947.png)
 
 ### 1.9.5 Code
 
