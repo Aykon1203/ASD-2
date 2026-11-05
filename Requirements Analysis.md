@@ -85,3 +85,47 @@ De business analyst beslist wie wanneer en hoe betrokken wordt. Niet elke stakeh
 
 #### 1.2.1.1 Stakeholders vs eindgebruikers
 ![](img/Pasted%20image%2020261105112128.png)
+
+*Voorbeeld: bij het bakkerijproject uit de vorige oefening is de zaakvoerder een stakeholder (hij financiert het project en bepaalt de richting) maar hij gebruikt de website zelf niet dagelijks. De verkoopster en de klanten zijn eindgebruikers.*
+
+### 1.2.1.2 Waarom zijn stakeholders zo belangrijk
+
+- Verschillende stakeholders hebben verschillende behoeften en verwachtingen
+- Groep stakeholders vergeten bevragen -> je mist requirements
+- Twee stakeholders verschillende doelen -> je krijgt tegenstrijdige requirements
+* Zonder draagvlak bij stakeholders -> project kan mislukken
+
+![](img/Pasted%20image%2020261105113336.png)
+
+### 1.2.2 Stakeholders identificeren
+
+#### 1.2.2.1 Technieken om stakeholders te identificeren
+
+**Brainstorm met de opdrachtgever**
+Begin met een eerste gesprek met de opdrachtgever. Vraag wie het systeem zal gebruiken, wie er belang bij heeft, wie er hinder van kan ondervinden, wie de beslissingen neemt.
+
+**Organisatieschema analyseren**
+Bekijk het organogram van de organisatie. Welke afdelingen of functies zijn er? Welke zouden te maken krijgen met het nieuwe systeem?
+
+**Processen in kaart brengen**
+Als je weet welke processen het systeem zal ondersteunen, kun je afleiden welke mensen bij die processen betrokken zijn. Zij zijn dan ook stakeholders.
+
+**Snowball-techniek**
+Vraag elke geïnterviewde stakeholder: 'Wie zou ik nog moeten spreken?' Zo ontdek je stakeholders die je zelf misschien niet had bedacht.
+
+#### 1.2.2.2 Checklist stakeholderidentificatie
+
+![](ASD/img/Pasted%20image%2020261105113632.png)
+
+### 1.2.3 Stakeholders categoriseren: Power/Interest Grid
+Power/Interest Grid (aka. stakeholder matrix / mendelow matrix) wordt gebruikt om te bepalen hoe je met elke stakeholder omgaat.
+
+Er zijn twee assen: invloed (op het project) en interesse (in het project)
+![](ASD/img/Pasted%20image%2020261105114003.png)
+
+![](ASD/img/Pasted%20image%2020261105114113.png)
+
+### 1.2.4 Kernbegrippen
+![](ASD/img/Pasted%20image%2020261105114139.png)
+
+**Oefeningen**: https://orion.hogent.be/d2l/le/lessons/26028/topics/82608
