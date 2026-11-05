@@ -1,6 +1,6 @@
 ## 1.1 Requirement Elicitatietechnieken
 
-![](Pasted%20image%2020261013150215.png)
+![](img/Pasted%20image%2020261013150215.png)
 
 ### 1.1.1 Wat zijn requirements
 
@@ -65,10 +65,10 @@ De business analist (BA) is de schakel tussen de business en IT. Hij of zij vert
 5. Beheer (requirement management)
 	1. Requirements kunnen veranderen tijdens het project
 
-![](Pasted%20image%2020261015104047.png)
+![](img/Pasted%20image%2020261015104047.png)
 
 ## 1.1.4 Kernbegrippen
-![](Pasted%20image%2020261015104125.png)
+![](img/Pasted%20image%2020261015104125.png)
 
 **Oefeningen:** https://orion.hogent.be/d2l/le/lessons/26028/topics/82607
 
@@ -79,9 +79,9 @@ Alle betrokkenen die die invloedt hebben op het project.
 
 *"Een stakeholder is elke persoon, groep of organisatie die invloed heeft op het project, of erdoor beïnvloed wordt. Stakeholders kunnen intern (binnen de organisatie) of extern (buiten de organisatie) zijn."*
 
-![](Pasted%20image%2020261105111933.png)
+![](img/Pasted%20image%2020261105111933.png)
 
 De business analyst beslist wie wanneer en hoe betrokken wordt. Niet elke stakeholder is even belangrijk.
 
 #### 1.2.1.1 Stakeholders vs eindgebruikers
-![](Pasted%20image%2020261105112128.png)
+![](img/Pasted%20image%2020261105112128.png)
