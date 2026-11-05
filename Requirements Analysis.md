@@ -18,7 +18,7 @@ Een requirement is de brug tussen de business en IT die beschrijft wat de klant 
 **Definitie volgens IEEE**: *Een requirement is een conditie of vermogen waaraan een systeem of systeemcomponent moet voldoen of moet bezitten om te voldoen aan een contract, standaard, specificatie of andere formeel opgestelde documenten.* 
 
 #### 1.1.1.2 Soorten Requirements
-![](Pasted%20image%2020261015102802.png)
+![](img/Pasted%20image%2020261015102802.png)
 
 ### 1.1.2 De rol van de business analist
 De business analist (BA) is de schakel tussen de business en IT. Hij of zij vertaalt de behoeften van de organisatie en de eindgebruikers naar concrete requirements die het ontwikkelteam kan implementeren.
