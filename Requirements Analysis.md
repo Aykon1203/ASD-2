@@ -15,7 +15,7 @@ Een requirement is de brug tussen de business en IT die beschrijft wat de klant 
  Een goed requirementsproces helpt om deze problemen te vermijden. Het zorgt ervoor dat iedereen (klant, gebruiker en ontwikkelaar) dezelfde verwachtingen heeft over het eindproduct.
 
 #### 1.1.1.1 Definitie
-**Definitie volgens IEEE**: *Een requirement is een conditie of vermogen waaraan een systeem of systeemcomponent moet voldoen of moet bezitten om te voldoen aan een contract, standaard, specificatie of andere formeel opgestelde documenten.*
+**Definitie volgens IEEE**: *Een requirement is een conditie of vermogen waaraan een systeem of systeemcomponent moet voldoen of moet bezitten om te voldoen aan een contract, standaard, specificatie of andere formeel opgestelde documenten.* 
 
 #### 1.1.1.2 Soorten Requirements
 ![](Pasted%20image%2020261015102802.png)
