@@ -115,17 +115,88 @@ Vraag elke geïnterviewde stakeholder: 'Wie zou ik nog moeten spreken?' Zo ontde
 
 #### 1.2.2.2 Checklist stakeholderidentificatie
 
-![](ASD/img/Pasted%20image%2020261105113632.png)
+![](img/Pasted%20image%2020261105113632.png)
 
 ### 1.2.3 Stakeholders categoriseren: Power/Interest Grid
 Power/Interest Grid (aka. stakeholder matrix / mendelow matrix) wordt gebruikt om te bepalen hoe je met elke stakeholder omgaat.
 
 Er zijn twee assen: invloed (op het project) en interesse (in het project)
-![](ASD/img/Pasted%20image%2020261105114003.png)
+![](img/Pasted%20image%2020261105114003.png)
 
-![](ASD/img/Pasted%20image%2020261105114113.png)
+![](img/Pasted%20image%2020261105114113.png)
 
 ### 1.2.4 Kernbegrippen
-![](ASD/img/Pasted%20image%2020261105114139.png)
+![](img/Pasted%20image%2020261105114139.png)
 
 **Oefeningen**: https://orion.hogent.be/d2l/le/lessons/26028/topics/82608
+
+## 1.3 Elicitatietechnieken
+
+### 1.3.1 Wat is elicitatie
+Elicitatie is het actief verzamelen van informatie bij stakeholders om requirements te bepalen.
+
+
+![](img/Pasted%20image%2020261112104116.png)
+
+### 1.3.1.1 Soorten vragen
+![](img/Pasted%20image%2020261112104151.png)
+
+### 1.3.2 Overzicht van elicitatietechnieken
+
+De techniek om requirements te verzamelen hangt af van:
+1. hoeveel tijd je beschikbaar hebt
+2. hoeveel stakeholders er zijn
+3. geografische verspreiding
+4. hoe complex de materie is
+
+![](img/Pasted%20image%2020261112104448.png)![](img/Pasted%20image%2020261112104457.png)![](img/Pasted%20image%2020261112104508.png)![](img/Pasted%20image%2020261112104516.png)![](img/Pasted%20image%2020261112104525.png)
+
+### 1.3.3 Het interview in de diepte
+Het interview is de meest gebruikte elicitatietechniek.
+
+#### 1.3.3.1 Voorbereiding
+
+- Doel bepalen: wat wil je te weten komen?
+- Juiste gesprekspartner identificeren: wie kan jou dit vertellen?
+- Vragenlijst opstellen, gebruiken als leidraad, niet als script
+- Vragen op voorhand doorsturen zodat de gesprekspartner zich kan voorbereiden
+- Voldoende tijd inplannen: een goed interview duurt 45 tot 90 minuten
+- Vraag toestemming om aantekeningen te maken of het gesprek op te nemen
+
+#### 1.3.3.2 Tijdens het interview
+
+- Begin met context te geven: wie ben je, wat is het doel van het gesprek
+- Stel open vragen en luister actief
+- Vraag altijd door: 'Waarom?', 'Hoe werkt dat nu?', 'Wat bedoel je precies?'
+- Vat samen en controleer of je het correct begrijpt: 'Begrijp ik het goed dat...?'
+- Vermijd het stellen van suggestieve vragen
+- Eindig met: 'Is er nog iets dat je wil toevoegen?' en 'Wie zou ik nog moeten spreken?'
+
+![](img/Pasted%20image%2020261112104904.png)
+
+#### 1.3.3.3 Interviewsjabloon
+![](img/Pasted%20image%2020261112104943.png)
+
+#### 1.3.3.4 Verwerking achteraf
+
+- Aantekeningen zo snel mogelijk uitwerken (max. 24u)
+- Samenvatting van gesprek naar gesprekspartnersturen ter validatie
+- Ontdekte requirements markeren
+- Onzekerheden en onbeantwoorde vragen noteren
+
+### 1.3.4 Persona's opstellen
+
+Een persona is een fictief maar realistisch profiel van een gebruiker van het systeem.
+Persona's worden opgesteld op basis van de interviews en observaties die zijn uitgevoerd.
+Persona's helpen om de eindgebruiker centraal te stellen bij het ontwerp van het systeem.![](img/Pasted%20image%2020261112105323.png)
+
+#### 1.3.4.1 Wat bevat een persona
+![](img/Pasted%20image%2020261112105348.png)
+
+**Voorbeeld van een persona:**
+![](img/Pasted%20image%2020261112105411.png)
+
+### 1.3.5 Kernbegrippen
+![](img/Pasted%20image%2020261112105435.png)
+
+**Oefeningen:** https://orion.hogent.be/d2l/le/lessons/26028/topics/82609
